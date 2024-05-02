@@ -13,7 +13,8 @@ internal class Banda : IAvaliavel
     public string Nome { get; }
     public double Media 
     {
-        get{
+        get
+        {
             if (notas.Count == 0) return 0;
             else return notas.Average(a => a.Nota);
         }

@@ -12,8 +12,6 @@ internal class Album : IAvaliavel
 
     public string Nome { get; }
     public int DuracaoTotal => musicas.Sum(m => m.Duracao);
-    public List<Musica> Musicas => musicas;
-
     public double Media
     {
         get
@@ -22,6 +20,8 @@ internal class Album : IAvaliavel
             else return notas.Average(a => a.Nota);
         }
     }
+
+    public List<Musica> Musicas => musicas;
 
     public void AdicionarMusica(Musica musica)
     {
